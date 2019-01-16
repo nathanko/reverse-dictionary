@@ -3,6 +3,8 @@ import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+nltk.download('punkt')
+
 def LemmatizeTokenizer(text):
   punctTranslateDict = dict((ord(punc), None) for punc in string.punctuation)
   text = text.lower().translate(punctTranslateDict)
