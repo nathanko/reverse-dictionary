@@ -6,17 +6,17 @@ import os
 
 clf = None
 print("Reading data...")
-  try:
-    filename = os.path.join(os.path.dirname(__file__), 'data/dictionary-small.json')
-    with open(filename) as f:
-      print ("Parsing data...")
-      data = json.load(f)
-      print ("Creating classifier...")
-      clf = TextClassifier(data)
-  except EnvironmentError as e:
-    print ('ERROR reading data: {}'.format(e), file=sys.stderr)
-  print("Launching web app...")
-  app.run()
+try:
+  filename = os.path.join(os.path.dirname(__file__), 'data/dictionary-small.json')
+  with open(filename) as f:
+    print ("Parsing data...")
+    data = json.load(f)
+    print ("Creating classifier...")
+    clf = TextClassifier(data)
+except EnvironmentError as e:
+  print ('ERROR reading data: {}'.format(e), file=sys.stderr)
+print("Launching web app...")
+app.run()
 
 app = Flask(__name__)
 
