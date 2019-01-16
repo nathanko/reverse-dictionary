@@ -17,8 +17,7 @@ try:
     clf = TextClassifier(data)
 except EnvironmentError as e:
   print ('ERROR reading data: {}'.format(e), file=sys.stderr)
-print("Launching web app...")
-app.run()
+
 
 @app.route('/')
 def hello():
@@ -36,4 +35,6 @@ def classify():
       resp.status_code = 400
       return resp
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
+  print("Launching web app...")
+  app.run()
