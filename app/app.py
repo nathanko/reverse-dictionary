@@ -20,6 +20,10 @@ print("Reading data...")
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello():
+  return  "Hello!"
+
 @app.route('/api/classify')
 def classify():
     if 'text' in request.args:
