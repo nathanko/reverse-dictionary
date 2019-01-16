@@ -1,3 +1,3 @@
-web: gunicorn --chdir basic_classifier app:app
+web: gunicorn --chdir app app:app
 
 	
