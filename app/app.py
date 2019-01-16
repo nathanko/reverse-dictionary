@@ -4,6 +4,8 @@ import json
 import sys
 import os
 
+app = Flask(__name__)
+
 clf = None
 print("Reading data...")
 try:
@@ -17,8 +19,6 @@ except EnvironmentError as e:
   print ('ERROR reading data: {}'.format(e), file=sys.stderr)
 print("Launching web app...")
 app.run()
-
-app = Flask(__name__)
 
 @app.route('/')
 def hello():
