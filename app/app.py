@@ -9,7 +9,7 @@ app = Flask(__name__)
 clf = None
 print("Reading data...")
 try:
-  filename = os.path.join(os.path.dirname(__file__), 'data/dictionary-small.json')
+  filename = os.path.join(os.path.dirname(__file__), 'data/dictionary.json')
   with open(filename) as f:
     print ("Parsing data...")
     data = json.load(f)
