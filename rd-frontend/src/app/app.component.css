@@ -1,0 +1,44 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+main {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#home-link {
+    text-decoration: none;
+    float: left;
+}
+#home-link #logo {
+    width: 30px;
+    height: 30px;
+}
+h1 {
+    text-align: center;
+}
+#subtitle {
+    text-align: center;
+    font-size: 14px;
+    font-weight: initial;
+}
+.center {
+    margin: 0 auto;
+}
+#input-form {
+    /* background: #3f0; */
+    width: 40%;
+    margin: 20px auto;
+}
+#input-form input {
+    width: 80%;
+    /* background: black; */
+}
+#input-form button {
+    float: right;
+}
+#loading {
+    text-align: center;
+}
+footer {
+    text-align: center;
+    padding-top: 40px;
+}
