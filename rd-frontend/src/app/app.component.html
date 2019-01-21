@@ -16,17 +16,17 @@
   </div>
   <div id="loading" *ngIf='loading'>Loading...</div>
   <mat-accordion *ngIf='results.length > 0'>
-    <mat-expansion-panel *ngFor='let result of results'>
+    <mat-expansion-panel *ngFor='let result of results' [expanded]="result === results[0]">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          {{ result.entry }}
+          {{ result .entry }}
         </mat-panel-title>
         <mat-panel-description>
           {{ result.definition }}
         </mat-panel-description>
       </mat-expansion-panel-header>
 
-      Cosine similarity: {{ result.cosine }}
+      Cosine similarity: {{ result.cosine | number: '1.1-2' }}
 
     </mat-expansion-panel>
   </mat-accordion>

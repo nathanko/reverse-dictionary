@@ -15,8 +15,9 @@ export class AppComponent {
   search(text: string) {
     this.loading = true;
     this.api.getResults(text).subscribe(resp => {
-      console.log(resp);
+      // console.log(resp);
       this.results = resp.message.prediction;
+      // this.results = resp.message.prediction.filter(result => result.cosine > 0);
       this.loading = false;
       });
   }
