@@ -10,3 +10,4 @@ scipy==1.2.0
 sklearn==0.0
 Werkzeug==0.14.1
 nltk==3.4
+Flask-Cors==3.0.7

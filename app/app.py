@@ -1,10 +1,12 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from text_classifier import TextClassifier
 import json
 import sys
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 clf = None
 print("Reading data...")
