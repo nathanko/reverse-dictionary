@@ -7,7 +7,7 @@
   <div id="" class="center">
     <form #form="ngForm" class="center" (submit)="search(form.value.text)">
       <div id="input-form" class="center">
-        <span class="center">
+        <span id="searchbox" class="center">
           <input placeholder="Definition to search" name="text" ngModel>
         </span>
         <button type='submit' color="primary">Search</button>
@@ -18,7 +18,7 @@
   <div id="loading" *ngIf='loading'>Loading...</div>
   <mat-accordion *ngIf='results.length > 0'>
     <mat-expansion-panel *ngFor='let result of results' [expanded]="result === results[0]">
-      <mat-expansion-panel-header>
+      <mat-expansion-panel-header #entryHeader [collapsedHeight]='"auto"' style="padding:1em;">
         <mat-panel-title>
           {{ result .entry }}
         </mat-panel-title>

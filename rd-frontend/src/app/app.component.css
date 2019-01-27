@@ -28,15 +28,21 @@ h1 {
     width: 40%;
     margin: 20px auto;
 }
+#input-form #searchbox {
+    padding-right: 1rem;
+}
 #input-form input {
     width: 80%;
     /* background: black; */
 }
 #input-form button {
-    float: right;
+    /* float: right; */
 }
 #loading {
     text-align: center;
+}
+#entryHeader {
+    padding: 1rem;
 }
 footer {
     text-align: center;
